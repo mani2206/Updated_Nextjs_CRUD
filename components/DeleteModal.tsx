@@ -30,11 +30,18 @@
 //   );
 // }
 // components/DeleteModal.tsx
-interface DeleteModalProps {
-  onConfirm: () => void; // or () => Promise<void> if it's async
+// interface DeleteModalProps {
+//   onConfirm: () => void; // or () => Promise<void> if it's async
+//   onCancel: () => void;
+//   isLoading: boolean;
+// }
+
+type DeleteModalProps = {
+  onConfirm: () => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
-}
+};
+
 
 const DeleteModal: React.FC<DeleteModalProps> = ({ onConfirm, onCancel, isLoading }) => {
   return (
@@ -60,5 +67,6 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ onConfirm, onCancel, isLoadin
     </div>
   );
 };
+
 
 export default DeleteModal;
