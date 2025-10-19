@@ -1,0 +1,8 @@
+{
+  "categories": [
+    { "id": 1, "name": "Tech" },
+    { "id": 2, "name": "Lifestyle" },
+    { "id": 3, "name": "Travel" },
+    { "id": 4, "name": "Food" }
+  ]
+}
